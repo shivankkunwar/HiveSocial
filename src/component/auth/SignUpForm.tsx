@@ -1,9 +1,9 @@
 
-import { useState, useEffect } from "react";
 
-import { Form, Input, Button, Checkbox } from "antd";
+
+import { Form, Input, Button,} from "antd";
 import { MailOutlined, LockOutlined } from "@ant-design/icons";
-import { Row, Col, Typography } from "antd";
+import {  Typography } from "antd";
 import "./Auth"
 const { Title } = Typography;
 

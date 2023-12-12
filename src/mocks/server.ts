@@ -6,7 +6,7 @@ createServer({
     this.namespace = 'api';
     
     // Define API endpoints and responses here
-    this.post('/login', (schema, request) => {
+    this.post('/login', (_,request) => {
       let attrs = JSON.parse(request.requestBody);
       
       // Mock successful login
@@ -24,7 +24,7 @@ createServer({
     });
 
     
-    this.post('/signup', (schema, request) => {
+    this.post('/signup', (_, request) => {
       let attrs = JSON.parse(request.requestBody);
       
       // Mock successful signup

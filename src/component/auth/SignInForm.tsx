@@ -1,15 +1,32 @@
 
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import {  Typography } from "antd";
+
+import axios from 'axios'
 import "./Auth"
 const { Title } = Typography;
 function SignInForm() {
 
-
-    const onFinish = (values: any) => {
-        console.log('Success:', values);
-    };
+    
+    const onFinish = async (values:any) => {
+        console.log(values)
+        try{
+            const response = await axios.post('/api/login', values);
+            console.log(response)
+            if (response.data.status === 'ok') {
+                message.success('Logged in successfully!');
+                
+                
+              } else {
+                message.error('Failed to log in.');
+              }
+        }
+        catch(error){
+            console.log(error);
+        }
+       
+      };
 
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);

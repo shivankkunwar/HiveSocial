@@ -1,4 +1,5 @@
 import { createServer } from 'miragejs';
+import posts from '../post.json';
 
 export const startMockServer = () => {
 createServer({
@@ -22,7 +23,10 @@ createServer({
         status: 'fail',
       };
     });
-
+    
+    this.get('/data', () => {
+        return posts;
+      });
     
     this.post('/signup', (_, request) => {
       let attrs = JSON.parse(request.requestBody);

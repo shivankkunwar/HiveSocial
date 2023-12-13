@@ -2,12 +2,12 @@
 import { Form, Input, Button, Checkbox, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import {  Typography } from "antd";
-
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import "./Auth"
 const { Title } = Typography;
 function SignInForm() {
-
+    const navigate= useNavigate();
     
     const onFinish = async (values:any) => {
         console.log(values)
@@ -17,7 +17,7 @@ function SignInForm() {
             if (response.data.status === 'ok') {
                 message.success('Logged in successfully!');
                 
-                
+                navigate("/home");
               } else {
                 message.error('Failed to log in.');
               }

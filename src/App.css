@@ -2,3 +2,10 @@
     margin: 0;
     
 }
+
+.active{
+    color: red;
+}
+.ant-menu-item-selected {
+    background-color: #F4F4F4!important; /* Change to your desired color */
+  }

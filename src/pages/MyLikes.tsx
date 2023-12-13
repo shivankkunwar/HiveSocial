@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+
 import ProCard from '@ant-design/pro-card';
 import Post from '../component/post/Post';
 import { usePostContext } from '../../Context/context';
 function MyLikes() {
-  const {posts, setPosts} = usePostContext();
+  const {posts, } = usePostContext();
   
   console.log(posts)
   const likedPosts = posts.filter((post : any)=> post.isLiked);

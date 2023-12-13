@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+
 
 import ProCard from '@ant-design/pro-card';
 import { message } from "antd"
@@ -18,7 +18,7 @@ type PostType = {
   isLiked: boolean;
   isBookmarked: boolean;
 };
-function Home(props : any) {
+function Home() {
   const{ posts, setPosts}= usePostContext();
 
   console.log(posts)

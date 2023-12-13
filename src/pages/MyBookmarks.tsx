@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+
 import ProCard from '@ant-design/pro-card';
 import Post from '../component/post/Post';
 import { usePostContext } from '../../Context/context';
 function MyBookmarks() {
-  const {posts, setPosts} = usePostContext();
+  const {posts, } = usePostContext();
   
   console.log(posts)
   const bookmarkedPosts = posts.filter((post : any)=> post.isBookmarked);

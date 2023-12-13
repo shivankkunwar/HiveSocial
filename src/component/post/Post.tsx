@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import  {  useState } from 'react';
 import ProCard from '@ant-design/pro-card';
 
 import { LikeOutlined, BookOutlined, EditOutlined, DeleteOutlined, CommentOutlined } from '@ant-design/icons';
 import { usePostContext } from '../../../Context/context';
 // A function component for the post
-const Post = ({ post ,id}: any) => {
+const Post = ({ post}: any) => {
     const [Liked, setIsLiked] = useState(post.isLiked);
     const [Bookmarked, setIsBookmarked] = useState(post.isBookmarked);
     const {posts, setPosts}= usePostContext();
@@ -37,7 +37,7 @@ const Post = ({ post ,id}: any) => {
         setPosts(updatedPosts);
       };
     // Destructure the post object
-    const { name, photo, date, content, likes, bookmarks, comments, isOwner, isLiked, isBookmarked } = post;
+    const { name, photo, date, content, likes, bookmarks, comments, isOwner, isBookmarked } = post;
 
     // Define the actions for the post
     const actions = [

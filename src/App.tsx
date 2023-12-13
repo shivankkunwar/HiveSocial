@@ -11,19 +11,7 @@ import MyPosts from './pages/MyPosts';
 import MyProfile from './pages/MyProfile';
 import { PostProvider } from "../Context/context.tsx";
 import './App.css'
-type PostType = {
-  id:number;
-  name: string;
-  photo: string;
-  date: string;
-  content: string;
-  likes: number;
-  bookmarks: number;
-  comments: number;
-  isOwner: boolean;
-  isLiked: boolean;
-  isBookmarked: boolean;
-};
+
 function App() {
   const [posts, setPosts] = useState([]);
 

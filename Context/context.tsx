@@ -1,4 +1,12 @@
 import React, { createContext,} from "react";
+type CommentType = {
+  id: number;
+  content: string;
+  author: string;
+  date: string;
+  isOwner: boolean;
+};
+
 type PostType = {
   id:number;
   name: string;
@@ -7,10 +15,11 @@ type PostType = {
   content: string;
   likes: number;
   bookmarks: number;
-  comments: number;
+ 
   isOwner: boolean;
   isLiked: boolean;
   isBookmarked: boolean;
+  comments: CommentType[]
 };
 type PostContextType = {
   posts: PostType[];

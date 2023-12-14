@@ -4,6 +4,13 @@ import ProCard from '@ant-design/pro-card';
 import { message } from "antd"
 import Post from '../component/post/Post';
 import { usePostContext } from '../../Context/context';
+type CommentType = {
+  id: number;
+  content: string;
+  author: string;
+  date: string;
+  isOwner: boolean;
+};
 
 type PostType = {
   id:number;
@@ -13,10 +20,11 @@ type PostType = {
   content: string;
   likes: number;
   bookmarks: number;
-  comments: number;
+ 
   isOwner: boolean;
   isLiked: boolean;
   isBookmarked: boolean;
+  comments:CommentType[]
 };
 function Home() {
   const{ posts, setPosts}= usePostContext();
@@ -49,10 +57,12 @@ function Home() {
       content: content,
       likes: 0,
       bookmarks: 0,
-      comments: 0,
+      
       isOwner: true,
       isLiked: false,
       isBookmarked: false,
+      comments: [],
+      
     };
     
     // Add the new post to the posts array

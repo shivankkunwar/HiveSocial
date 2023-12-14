@@ -4,6 +4,10 @@ import ProCard from '@ant-design/pro-card';
 import { message } from "antd"
 import Post from '../component/post/Post';
 import { usePostContext } from '../../Context/context';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import { useState } from 'react';
+
+const ITEMS_PER_PAGE = 10;
 type CommentType = {
   id: number;
   content: string;
@@ -28,8 +32,10 @@ type PostType = {
 };
 function Home() {
   const{ posts, setPosts}= usePostContext();
-
+  const [hasMoreItems, setHasMoreItems] = useState(true);
+  const [items, setItems] = useState<PostType[]>([]);
   console.log(posts)
+ 
   
   // Define a function to handle the submit event of the post form
   const handleSubmit = async (event: any) => {
@@ -51,7 +57,7 @@ function Home() {
     const dateString = today.toLocaleDateString('en-US', { year: 'numeric', month: 'numeric', day: 'numeric' });
     const newPost: PostType = {
       id:Math.random(),
-      name: 'user',
+      name: 'You',
       photo: `https://robohash.org/hassc1?size=50x50  `,
       date: dateString,
       content: content,
@@ -76,13 +82,32 @@ function Home() {
     event.target.reset();
   };
 
+  const fetchMoreData = () => {
+    if (items.length >= posts.length) {
+      setHasMoreItems(false);
+      return;
+    }
+
+    setTimeout(() => {
+      setItems(items.concat(posts.slice(items.length, items.length + ITEMS_PER_PAGE)));
+    }, 500);
+  };
+
   // Return the ProCard component for the home page
   return (
     <ProCard split="vertical" style={{ display: "flex", background: "linear-gradient(#FDFDFD,#F5F5F5, #F5F5F5)" }}>
       <ProCard title="All posts" colSpan="70%" style={{ display: "flex", background: "linear-gradient(#FDFDFD,#F5F5F5, #F5F5F5)" }}>
-        {posts.map((post : PostType, index: number) => (
-          <Post key={post.id} post={post} id={index} />
-        ))}
+      <InfiniteScroll
+          dataLength={items.length}
+          next={fetchMoreData}
+          hasMore={hasMoreItems}
+          loader={<h4>Loading...</h4>}
+          style={{overflow:"none"}}
+        >
+          {posts.map((post : PostType, index: number) => (
+            <Post key={post.id} post={post} id={index} />
+          ))}
+        </InfiniteScroll>
       </ProCard>
       <ProCard title="Create Post" colSpan="30%" style={{ background: "linear-gradient(#FDFDFD, #F5F5F5)", }} >
         <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>

@@ -1,6 +1,7 @@
 import  { useState } from 'react';
 import { useUserContext } from '../../Context/context.tsx';
 import styled from 'styled-components';
+import { Modal } from 'antd';
 
 const ProfileContainer = styled.div`
   display: grid;
@@ -81,6 +82,19 @@ function MyProfile() {
   const handleChange = (e: any) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
+  const handleConfirmEdit = () => {
+    Modal.confirm({
+      title: 'Confirm Edit',
+      content: 'Are you sure you want to save these changes?',
+      onOk: handleEdit,
+      onCancel() {
+        console.log('Cancel');
+
+      },
+      okText:"Yes",
+            cancelText:"No"
+    });
+  };
 
   return (
     <ProfileContainer>
@@ -108,7 +122,7 @@ function MyProfile() {
             <span>{user.photo}</span>
           )}
         </ProfileField>
-        <ProfileButton onClick={handleEdit}>{isEditing ? 'Save' : 'Edit'}</ProfileButton>
+        <ProfileButton onClick={isEditing ? handleConfirmEdit : handleEdit} >{isEditing ? 'Save' : 'Edit'}</ProfileButton>
       </ProfileDetails>
     </ProfileContainer>
   );

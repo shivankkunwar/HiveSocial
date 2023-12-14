@@ -15,6 +15,7 @@ function MyPosts() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [editedContent, setEditedContent] = useState('');
   const [editingPostId, setEditingPostId] = useState(null);
+  
   const myPostList = posts.filter((p)=>p.isOwner)
   const handleDeleteClick = (postId : number) => {
     const updatedPosts = posts.filter((p) => p.id !== postId);
@@ -119,7 +120,8 @@ function MyPosts() {
           ),
         }}
       />
-      <Modal title="Edit Post" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+      <Modal title="Edit Post" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} okText="Yes"
+            cancelText="No">
         <Input onChange={(e) => setEditedContent(e.target.value)} />
       </Modal>
     </div>

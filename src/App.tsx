@@ -1,8 +1,8 @@
 
 import Login from "./component/auth/Auth"
 import {useState, useEffect} from "react"
-import { BrowserRouter as Router, Route, Routes, NavLink} from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Routes, NavLink, Link} from "react-router-dom";
+import { Button } from 'antd';
 import BasicLayout from '@ant-design/pro-layout';
 import Home from './pages/Home';
 import MyLikes from './pages/MyLikes';
@@ -15,13 +15,20 @@ import './App.css'
 
 function App() {
   const [posts, setPosts] = useState([]);
+  
   const [user, setUser] = useState({
     id: 1,
     name: 'John Doe',
-    email: 'john.doe@example.com',
-    bio: 'A short bio about John Doe.',
+    email: 'test@test.com',
+    bio: 'A short bio about you.',
     photo: 'https://robohash.org/hassc1?size=50x50'
   });
+  const handleLogout = () => {
+    
+    
+  };
+ 
+ 
 
   useEffect(() => {
     try {
@@ -60,13 +67,15 @@ function App() {
                   { path: '/my-bookmarks', name: 'My Bookmarks' },
                   { path: '/my-posts', name: 'My Posts' },
                   { path: '/my-profile', name: 'My Profile' },
+                  
                 ]}
                 menuItemRender={(item, dom) => {
                   const path = item.path || '/';
                   const isActiveStyle = { color: '#1890ff' };
                   return <NavLink to={path} style= { ({isActive})=>isActive? isActiveStyle : {}} >{dom}</NavLink>;
                 }}
-                
+                rightContentRender={() => <Link to = "/"><Button onClick={handleLogout}>Logout</Button></Link>}
+
               >
                 <Routes>
                   <Route path="/home" element={<Home />} />
@@ -79,10 +88,10 @@ function App() {
             }
           />
           <Route key="login" path="/" element={<Login />} />
-          
+        
         </Routes>
       </Router>
-
+      
  
     </PostProvider>
     </UserProvider>

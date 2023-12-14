@@ -2,41 +2,462 @@
   {
     "user": [
       {
-        "id": 2,
+        "id": 21,
         "name": "Alice",
         "photo": "https://robohash.org/hassc2?size=50x50",
         "date": "12/12/2023",
         "content": "This is a post by Alice.",
         "likes": 10,
         "bookmarks": 5,
-        "commentCount": 3,
+        "comments":[
+          {
+            "id":1,
+            "content": "first comment test",
+            "author":"you",
+            "date":"15/12/2023",
+            "isOwner":true
+          },
+          {
+            "id":2,
+            "content": "excited for your comment",
+            "author":"Alice",
+            "date":"15/12/2023",
+            "isOwner":false
+          }
+        ],
         "isOwner": false,
         "isLiked": false,
         "isBookmarked": false
       },
       {
-        "id": 1,
-        "name": "user",
+        "id": 130,
+        "name": "You",
         "photo": "https://robohash.org/hassc1?size=50x50",
-        "date": "12/12/2023",
-        "content": "This is a post by Bob.",
-        "likes": 8,
-        "bookmarks": 4,
-        "commentCount": 2,
+        "date": "13/12/2023",
+        "content": "Just enjoyed a beautiful sunset. Nature is amazing!",
+        "likes": 15,
+        "bookmarks": 8,
+        "comments": [
+          {
+            "id": 3,
+            "content": "Sunsets are my favorite too!",
+            "author": "Alice",
+            "date": "16/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 4,
+            "content": "Absolutely stunning!",
+            "author": "Charlie",
+            "date": "16/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "Glad you had a great time!",
+            "author": "you",
+            "date": "16/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": true,
+        "isLiked": false,
+        "isBookmarked": true
+      },
+      {
+        "id": 52,
+        "name": "Alice",
+        "photo": "https://robohash.org/hassc5?size=50x50",
+        "date": "14/12/2023",
+        "content": "Spent the day exploring new places. Found a hidden gem!",
+        "likes": 20,
+        "bookmarks": 10,
+        "comments": [
+          {
+            "id": 1,
+            "content": "Tell us more about the hidden gem!",
+            "author": "you",
+            "date": "17/12/2023",
+            "isOwner": true
+          },
+          {
+            "id": 7,
+            "content": "I love discovering hidden gems too!",
+            "author": "Charlie",
+            "date": "17/12/2023",
+            "isOwner": false
+          }
+        ],
+        "isOwner": false,
+        "isLiked": true,
+        "isBookmarked": false
+      },
+      {
+        "id": 61,
+        "name": "Charlie",
+        "photo": "https://robohash.org/hassc6?size=50x50",
+        "date": "15/12/2023",
+        "content": "Just finished reading a great book. Highly recommend!",
+        "likes": 12,
+        "bookmarks": 6,
+        "comments": [
+          {
+            "id": 8,
+            "content": "What book did you read?",
+            "author": "Bob",
+            "date": "18/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "I need a good book recommendation. Please share!",
+            "author": "you",
+            "date": "18/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": false,
+        "isLiked": false,
+        "isBookmarked": false
+      },{
+        "id": 12,
+        "name": "You",
+        "photo": "https://robohash.org/hassc7?size=50x50",
+        "date": "16/12/2023",
+        "content": "Just tried a new recipe! It turned out delicious!",
+        "likes": 25,
+        "bookmarks": 12,
+        "comments": [
+          {
+            "id": 10,
+            "content": "Can you share the recipe? I love trying new dishes!",
+            "author": "Alice",
+            "date": "19/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 11,
+            "content": "I'm always looking for new recipes. Please share!",
+            "author": "Bob",
+            "date": "19/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "Sure! I'll share the recipe with you.",
+            "author": "Your Friend",
+            "date": "19/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": true,
+        "isLiked": true,
+        "isBookmarked": false
+      },
+      {
+        "id": 8,
+        "name": "Bob",
+        "photo": "https://robohash.org/hassc8?size=50x50",
+        "date": "17/12/2023",
+        "content": "Visited a museum today. History comes alive!",
+        "likes": 18,
+        "bookmarks": 9,
+        "comments": [
+          {
+            "id": 12,
+            "content": "Which museum did you go to? I love history!",
+            "author": "Alice",
+            "date": "20/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 13,
+            "content": "Museums are fascinating. Tell us more!",
+            "author": "Charlie",
+            "date": "20/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "I visited the National History Museum. It was amazing!",
+            "author": "you",
+            "date": "20/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": false,
+        "isLiked": false,
+        "isBookmarked": true
+      },
+      {
+        "id": 9,
+        "name": "Alice",
+        "photo": "https://robohash.org/hassc9?size=50x50",
+        "date": "18/12/2023",
+        "content": "Learning a new language is challenging but fun!",
+        "likes": 22,
+        "bookmarks": 11,
+        "comments": [
+          {
+            "id": 14,
+            "content": "Which language are you learning? I'm curious!",
+            "author": "Charlie",
+            "date": "21/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "I'm learning French! It's a beautiful language.",
+            "author": "you",
+            "date": "21/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": false,
+        "isLiked": true,
+        "isBookmarked": false
+      },
+      {
+        "id": 10,
+        "name": "Charlie",
+        "photo": "https://robohash.org/hassc10?size=50x50",
+        "date": "19/12/2023",
+        "content": "Completed a 10k run today. Feeling accomplished!",
+        "likes": 30,
+        "bookmarks": 15,
+        "comments": [
+          {
+            "id": 15,
+            "content": "That's impressive! I struggle with a 5k.",
+            "author": "Bob",
+            "date": "22/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 16,
+            "content": "Running is a great way to stay fit. Well done!",
+            "author": "Your Friend",
+            "date": "22/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "Thank you! It was a challenging but rewarding run.",
+            "author": "you",
+            "date": "22/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": false,
+        "isLiked": true,
+        "isBookmarked": true
+      },
+      {
+        "id": 13,
+        "name": "You",
+        "photo": "https://robohash.org/hassc11?size=50x50",
+        "date": "20/12/2023",
+        "content": "Watched a classic movie marathon over the weekend. Nostalgic!",
+        "likes": 28,
+        "bookmarks": 14,
+        "comments": [
+          {
+            "id": 17,
+            "content": "Which classic movies did you watch?",
+            "author": "Alice",
+            "date": "23/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 18,
+            "content": "I love classic movies! Share your favorites.",
+            "author": "Bob",
+            "date": "23/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "I watched Casablanca, Gone with the Wind, and Citizen Kane.",
+            "author": "You",
+            "date": "23/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": true,
+        "isLiked": false,
+        "isBookmarked": false
+      }, {
+        "id": 1321,
+        "name": "Alice",
+        "photo": "https://robohash.org/hassc13?size=50x50",
+        "date": "22/12/2023",
+        "content": "Visited an art gallery today. So much creativity in one place!",
+        "likes": 35,
+        "bookmarks": 18,
+        "comments": [
+          {
+            "id": 21,
+            "content": "Art galleries are inspiring! Any favorite pieces?",
+            "author": "Charlie",
+            "date": "25/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 22,
+            "content": "I love exploring art galleries too. Share your experience!",
+            "author": "Bob",
+            "date": "25/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "The abstract paintings were fascinating! Couldn't pick just one favorite.",
+            "author": "You",
+            "date": "25/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": false,
+        "isLiked": true,
+        "isBookmarked": true
+      },
+      {
+        "id": 14,
+        "name": "You",
+        "photo": "https://robohash.org/hassc14?size=50x50",
+        "date": "23/12/2023",
+        "content": "Explored a hiking trail. Nature's beauty never ceases to amaze!",
+        "likes": 32,
+        "bookmarks": 16,
+        "comments": [
+          {
+            "id": 23,
+            "content": "Which trail did you hike? I'm always looking for new trails!",
+            "author": "Bob",
+            "date": "26/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 24,
+            "content": "Hiking is a great way to connect with nature. Share your favorite moments!",
+            "author": "Charlie",
+            "date": "26/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "I explored the Pine Ridge Trail. The view from the top was breathtaking!",
+            "author": "Your Friend",
+            "date": "26/12/2023",
+            "isOwner": true
+          }
+        ],
         "isOwner": true,
         "isLiked": false,
         "isBookmarked": false
       },
       {
-        "id": 3,
+        "id": 15,
         "name": "Charlie",
-        "photo": "https://robohash.org/hassc3?size=50x50",
-        "date": "12/12/2023",
-        "content": "This is a post by Charlie.",
-        "likes": 6,
-        "bookmarks": 3,
-        "commentCount": 1,
+        "photo": "https://robohash.org/hassc15?size=50x50",
+        "date": "24/12/2023",
+        "content": "Cooked a festive meal for friends and family. Good food, great company!",
+        "likes": 40,
+        "bookmarks": 20,
+        "comments": [
+          {
+            "id": 25,
+            "content": "What was on the menu? I love trying new recipes!",
+            "author": "Alice",
+            "date": "27/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 26,
+            "content": "Cooking for loved ones is special. Share your favorite dish!",
+            "author": "Your Friend",
+            "date": "27/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "I prepared a feast with roast turkey, mashed potatoes, and apple pie for dessert!",
+            "author": "you",
+            "date": "27/12/2023",
+            "isOwner": true
+          }
+        ],
         "isOwner": false,
+        "isLiked": true,
+        "isBookmarked": false
+      },
+      {
+        "id": 112,
+        "name": "You",
+        "photo": "https://robohash.org/hassc16?size=50x50",
+        "date": "25/12/2023",
+        "content": "Attended a tech conference. Exciting innovations ahead!",
+        "likes": 38,
+        "bookmarks": 19,
+        "comments": [
+          {
+            "id": 27,
+            "content": "Any standout presentations? I'm curious about the latest tech trends!",
+            "author": "Your Friend",
+            "date": "28/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 28,
+            "content": "Tech conferences are always enlightening. Share your key takeaways!",
+            "author": "Alice",
+            "date": "28/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "I was impressed by the advancements in artificial intelligence and virtual reality.",
+            "author": "you",
+            "date": "28/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": true,
+        "isLiked": true,
+        "isBookmarked": true
+      },
+      {
+        "id": 131,
+        "name": "You",
+        "photo": "https://robohash.org/hassc17?size=50x50",
+        "date": "26/12/2023",
+        "content": "Took a spontaneous road trip. Sometimes, the best adventures are unplanned!",
+        "likes": 45,
+        "bookmarks": 22,
+        "comments": [
+          {
+            "id": 29,
+            "content": "Where did you go on your road trip? Any memorable stops?",
+            "author": "Charlie",
+            "date": "29/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 30,
+            "content": "Spontaneous trips are the best! Share your favorite moments.",
+            "author": "Alice",
+            "date": "29/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "I explored the coastal route and stumbled upon charming seaside towns. A perfect adventure!",
+            "author": "You",
+            "date": "29/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": true,
         "isLiked": false,
         "isBookmarked": false
       }

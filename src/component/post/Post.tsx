@@ -200,10 +200,10 @@ const Post = ({ post }: any) => {
     const handleCancel = () => {
         setIsModalVisible(false);
     };
-    // Destructure the post object
+    // Destructured the post object
     const { name, photo, date, content, likes, bookmarks, isOwner, isBookmarked } = post;
 
-    // Define the actions for the post
+    // Defined the actions for the post
     const actions = [
         <LikeOutlined key="like" onClick={handleLikeClick} style={{ color: Liked ? 'red' : 'inherit', fontSize: "1rem" }} />, // Like button
         <span>{Liked ? likes + 1 : likes}</span>, // Like count
@@ -223,6 +223,7 @@ const Post = ({ post }: any) => {
 
     const commentList = post.comments?.map((comment: CommentType) => (
         <li key={comment.id} style={{ display: "flex", gap: "1rem" }}>
+           
             <Comment
                 actions={comment.isOwner ? [
                     <span key="edit" onClick={() => handleEditComment(comment.id)}>Edit</span>,

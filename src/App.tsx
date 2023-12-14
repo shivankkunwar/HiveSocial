@@ -10,7 +10,7 @@ import MyBookmarks from './pages/MyBookmarks';
 import MyPosts from './pages/MyPosts';
 import MyProfile from './pages/MyProfile';
 import { PostProvider } from "../Context/context.tsx";
-import { UserProvider, useUserContext } from '../Context/context.tsx';
+import { UserProvider  } from '../Context/context.tsx';
 import './App.css'
 
 function App() {

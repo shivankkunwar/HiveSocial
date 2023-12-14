@@ -10,10 +10,18 @@ import MyBookmarks from './pages/MyBookmarks';
 import MyPosts from './pages/MyPosts';
 import MyProfile from './pages/MyProfile';
 import { PostProvider } from "../Context/context.tsx";
+import { UserProvider, useUserContext } from '../Context/context.tsx';
 import './App.css'
 
 function App() {
   const [posts, setPosts] = useState([]);
+  const [user, setUser] = useState({
+    id: 1,
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    bio: 'A short bio about John Doe.',
+    photo: 'https://robohash.org/hassc1?size=50x50'
+  });
 
   useEffect(() => {
     try {
@@ -35,6 +43,7 @@ function App() {
   }, [])
   
   return (
+    <UserProvider value={{ user, setUser }}>
     <PostProvider value={{ posts , setPosts}}>
 
    
@@ -76,6 +85,7 @@ function App() {
 
  
     </PostProvider>
+    </UserProvider>
   )
 }
 

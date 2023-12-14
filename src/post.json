@@ -4,7 +4,7 @@
       {
         "id": 2,
         "name": "Alice",
-        "photo": "https://robohash.org/hassc12?size=50x50",
+        "photo": "https://robohash.org/hassc2?size=50x50",
         "date": "12/12/2023",
         "content": "This is a post by Alice.",
         "likes": 10,
@@ -30,7 +30,7 @@
       {
         "id": 3,
         "name": "Charlie",
-        "photo": "https://robohash.org/hassc5?size=50x50",
+        "photo": "https://robohash.org/hassc3?size=50x50",
         "date": "12/12/2023",
         "content": "This is a post by Charlie.",
         "likes": 6,

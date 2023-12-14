@@ -19,11 +19,13 @@ function SignInForm() {
                 
                 navigate("/home");
               } else {
+                console.log("worked")
                 message.error('Failed to log in.');
               }
         }
-        catch(error){
+        catch(error : any){
             console.log(error);
+            
         }
        
       };

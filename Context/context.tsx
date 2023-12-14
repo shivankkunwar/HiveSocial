@@ -45,3 +45,44 @@ export const usePostContext = (): PostContextType => {
   }
   return context;
 };
+
+
+type UserType = {
+  id: number;
+  name: string;
+  email: string;
+  bio: string;
+  photo: string;
+ };
+ 
+ type UserContextType = {
+  user: UserType;
+  setUser: React.Dispatch<React.SetStateAction<UserType>>;
+ };
+ 
+ const UserContext = React.createContext<UserContextType>({
+  user: {
+    id: 0,
+    name: '',
+    email: '',
+    bio: '',
+    photo: ''
+  },
+  setUser: () => {},
+ });
+ 
+ export const UserProvider: React.FC<React.PropsWithChildren<{value: UserContextType}>> = ({ children, value } : any) => {
+  return (
+    <UserContext.Provider value={value}>
+      {children}
+    </UserContext.Provider>
+  );
+ };
+ 
+ export const useUserContext = (): UserContextType => {
+  const context = React.useContext(UserContext);
+  if (!context) {
+    throw new Error('useUserContext must be used within a UserProvider');
+  }
+  return context;
+ };

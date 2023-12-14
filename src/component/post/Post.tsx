@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import ProCard from '@ant-design/pro-card';
-import { Modal, Button, Input, Avatar, List, message} from 'antd';
+
+
+import { Modal, Button, Input, Avatar , List, message} from 'antd';
 import { LikeOutlined, BookOutlined, EditOutlined, DeleteOutlined, CommentOutlined } from '@ant-design/icons';
 import { usePostContext } from '../../../Context/context';
 import { Comment } from '@ant-design/compatible';
@@ -227,7 +229,7 @@ const Post = ({ post }: any) => {
                     <span key="delete" onClick={() => handleDeleteComment(comment.id)}>Delete</span>
                 ] : []}
                 author={comment.author}
-                avatar={<Avatar src={`https://robohash.org/${comment.author}?size=50x50`} />}
+                avatar={<Avatar src={`https://robohash.org/hassc${comment.id}?size=50x50`} />}
                 content={
                     editingCommentId === comment.id ? (
                         <Input value={newCommentContent} onChange={(e) => setNewCommentContent(e.target.value)} />

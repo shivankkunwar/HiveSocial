@@ -1,6 +1,6 @@
 
-import Login from "./component/auth/Auth"
-import {useState, useEffect} from "react"
+import Login from "./component/auth/Auth";
+import {useState, useEffect} from "react";
 import { BrowserRouter as Router, Route, Routes, NavLink, Link} from "react-router-dom";
 import { Button } from 'antd';
 import BasicLayout from '@ant-design/pro-layout';
@@ -11,7 +11,7 @@ import MyPosts from './pages/MyPosts';
 import MyProfile from './pages/MyProfile';
 import { PostProvider } from "../Context/PostContext.tsx";
 import { UserProvider  } from '../Context/Providers.tsx';
-import './App.css'
+import './App.css';
 import { PostType } from "../utils/Types.ts";
 
 function App() {

@@ -1,7 +1,5 @@
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import ProCard from '@ant-design/pro-card';
-
-
 import { Modal, Button, Input, Avatar , List, message} from 'antd';
 import { LikeOutlined, BookOutlined, EditOutlined, DeleteOutlined, CommentOutlined } from '@ant-design/icons';
 import { usePostContext } from '../../../Context/PostContextUtils';
@@ -26,7 +24,7 @@ type PostType = {
     isOwner: boolean;
     isLiked: boolean;
     isBookmarked: boolean;
-    comments: CommentType[]
+    comments: CommentType[];
 };
 
 type Props = {
@@ -261,7 +259,7 @@ const Post: React.FC<Props> = ({ post }) => {
     ));
     // Return the ProCard component for the post
     return (
-        <div>
+        <div data-testid="post">
             <ProCard
                 style={{ margin: "1rem", borderRadius: "1rem", fontSize: "0.8rem" }}
                 colSpan={8} // Grid layout

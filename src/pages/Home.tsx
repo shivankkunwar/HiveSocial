@@ -1,13 +1,13 @@
 
-
 import ProCard from '@ant-design/pro-card';
-import { message } from "antd"
+import { message } from "antd";
 import Post from '../component/post/Post';
 import { usePostContext } from '../../Context/PostContextUtils';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useState } from 'react';
 
 const ITEMS_PER_PAGE = 10;
+
 type CommentType = {
   id: number;
   content: string;
@@ -28,7 +28,7 @@ type PostType = {
   isOwner: boolean;
   isLiked: boolean;
   isBookmarked: boolean;
-  comments:CommentType[]
+  comments:CommentType[];
 };
 function Home() {
   const{ posts, setPosts}= usePostContext();

@@ -1,5 +1,5 @@
 import { UserType } from "../utils/Types";
-import React from 'react'
+import React from 'react';
    
    type UserContextType = {
     user: UserType;

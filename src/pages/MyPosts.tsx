@@ -94,6 +94,7 @@ function MyPosts() {
 
   return (
     <div>
+      <p>Your Posts</p>
       <ProTable
         columns={columns}
         dataSource={myPostList}
@@ -121,9 +122,9 @@ function MyPosts() {
           ),
         }}
       />
-      <Modal title="Edit Post" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} okText="Yes"
+      <Modal title="Edit Post" open={isModalVisible} onOk={handleOk} onCancel={handleCancel} okText="Yes"
             cancelText="No">
-        <Input onChange={(e) => setEditedContent(e.target.value)} />
+        <Input onChange={(e) => setEditedContent(e.target.value)} placeholder='Enter your post content here (max length: 200 characters)'/>
       </Modal>
     </div>
   );

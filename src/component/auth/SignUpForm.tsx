@@ -6,9 +6,13 @@ import { MailOutlined, LockOutlined } from "@ant-design/icons";
 import {  Typography } from "antd";
 import "./Auth"
 const { Title } = Typography;
+type val={
+  email:string;
+  password:string;
+}
 
 const SignUpForm = () => {
-  const onFinish = (values: any) => {
+  const onFinish = (values: val) => {
     console.log("Success:", values);
   };
 

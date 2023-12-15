@@ -3,13 +3,14 @@ import { Form, Input, Button, Checkbox, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import {  Typography } from "antd";
 import { useNavigate } from 'react-router-dom';
+import { ValidateErrorEntity } from 'rc-field-form/lib/interface';
 import axios from 'axios'
 import "./Auth"
 const { Title } = Typography;
 function SignInForm() {
     const navigate= useNavigate();
     
-    const onFinish = async (values:any) => {
+    const onFinish = async (values:FieldType) => {
         console.log(values)
         try{
             const response = await axios.post('/api/login', values);
@@ -23,16 +24,16 @@ function SignInForm() {
                 message.error('Failed to log in.');
               }
         }
-        catch(error : any){
+        catch(error ){
             console.log(error);
             
         }
        
       };
 
-    const onFinishFailed = (errorInfo: any) => {
+      const onFinishFailed = (errorInfo: ValidateErrorEntity<FieldType>) => {
         console.log('Failed:', errorInfo);
-    };
+      };
 
     type FieldType = {
         email?: string;

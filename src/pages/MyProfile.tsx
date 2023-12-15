@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import { useUserContext } from '../../Context/context.tsx';
+import { useUserContext } from '../../Context/UserContext.tsx';
 import styled from 'styled-components';
 import { Modal } from 'antd';
 
@@ -79,7 +79,7 @@ function MyProfile() {
     setIsEditing(!isEditing);
   };
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   const handleConfirmEdit = () => {

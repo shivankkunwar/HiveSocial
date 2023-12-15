@@ -9,12 +9,13 @@ import MyLikes from './pages/MyLikes';
 import MyBookmarks from './pages/MyBookmarks';
 import MyPosts from './pages/MyPosts';
 import MyProfile from './pages/MyProfile';
-import { PostProvider } from "../Context/context.tsx";
-import { UserProvider  } from '../Context/context.tsx';
+import { PostProvider } from "../Context/PostContext.tsx";
+import { UserProvider  } from '../Context/Providers.tsx';
 import './App.css'
+import { PostType } from "../utils/Types.ts";
 
 function App() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<PostType[]>([]);
   
   const [user, setUser] = useState({
     id: 1,
@@ -31,6 +32,7 @@ function App() {
  
 
   useEffect(() => {
+     
     try {
       fetch("/api/data")
         .then((response) => {
@@ -44,10 +46,10 @@ function App() {
           setPosts(data[0].user);
           console.log('Posts state after fetch:', posts);
         });
-    } catch (error: any) {
+    } catch (error) {
       console.log('Fetch error:', error.message);
     }
-  }, [])
+  }, [posts])
   
   return (
     <UserProvider value={{ user, setUser }}>

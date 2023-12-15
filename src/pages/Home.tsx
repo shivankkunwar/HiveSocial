@@ -3,7 +3,7 @@
 import ProCard from '@ant-design/pro-card';
 import { message } from "antd"
 import Post from '../component/post/Post';
-import { usePostContext } from '../../Context/context';
+import { usePostContext } from '../../Context/PostContextUtils';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useState } from 'react';
 
@@ -38,12 +38,12 @@ function Home() {
  
   
   // Define a function to handle the submit event of the post form
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     // Prevent the default behavior of the form
     event.preventDefault();
 
     // Get the post content from the form
-    const content = event.target.elements.content.value;
+    const content = (event.currentTarget.elements.namedItem('content') as HTMLInputElement).value;
 
     // Validate the post content
     if (!content || content.length > 200) {
@@ -79,7 +79,7 @@ function Home() {
     });
 
     // Clear the form input
-    event.target.reset();
+    event.currentTarget.reset();
   };
 
   const fetchMoreData = () => {

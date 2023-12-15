@@ -460,6 +460,165 @@
         "isOwner": true,
         "isLiked": false,
         "isBookmarked": false
+      },{
+        "id": 112,
+        "name": "You",
+        "photo": "https://robohash.org/hassc1?size=50x50",
+        "date": "13/12/2023",
+        "content": "Just enjoyed a beautiful movie. Acting is amazing!",
+        "likes": 15,
+        "bookmarks": 8,
+        "comments": [
+          {
+            "id": 3,
+            "content": "Movies are my favorite too!",
+            "author": "Alice",
+            "date": "16/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 4,
+            "content": "Absolutely stunning!",
+            "author": "Charlie",
+            "date": "16/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "Glad you had a great time!",
+            "author": "you",
+            "date": "16/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": true,
+        "isLiked": false,
+        "isBookmarked": true
+      },
+      {
+        "id": 521,
+        "name": "Alice",
+        "photo": "https://robohash.org/hassc5?size=50x50",
+        "date": "14/12/2023",
+        "content": "Spent the night exploring new places. Found a hidden gem!",
+        "likes": 20,
+        "bookmarks": 10,
+        "comments": [
+          {
+            "id": 1,
+            "content": "Tell us more about the hidden gem!",
+            "author": "you",
+            "date": "17/12/2023",
+            "isOwner": true
+          },
+          {
+            "id": 7,
+            "content": "I love discovering hidden gems too!",
+            "author": "Charlie",
+            "date": "17/12/2023",
+            "isOwner": false
+          }
+        ],
+        "isOwner": false,
+        "isLiked": true,
+        "isBookmarked": false
+      },
+      {
+        "id": 611,
+        "name": "Charlie",
+        "photo": "https://robohash.org/hassc6?size=50x50",
+        "date": "15/12/2023",
+        "content": "Just finished a Game. Highly recommend!",
+        "likes": 12,
+        "bookmarks": 6,
+        "comments": [
+          {
+            "id": 8,
+            "content": "What game did you play?",
+            "author": "Bob",
+            "date": "18/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "I need a good game recommendation. Please share!",
+            "author": "you",
+            "date": "18/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": false,
+        "isLiked": false,
+        "isBookmarked": false
+      },{
+        "id": 1211,
+        "name": "You",
+        "photo": "https://robohash.org/hassc7?size=50x50",
+        "date": "16/12/2023",
+        "content": "Just tried a new recipe! It turned out delicious!",
+        "likes": 25,
+        "bookmarks": 12,
+        "comments": [
+          {
+            "id": 10,
+            "content": "Can you share the recipe? I love trying new dishes!",
+            "author": "Alice",
+            "date": "19/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 11,
+            "content": "I'm always looking for new recipes. Please share!",
+            "author": "Bob",
+            "date": "19/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "Sure! I'll share the recipe with you.",
+            "author": "Your Friend",
+            "date": "19/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": true,
+        "isLiked": true,
+        "isBookmarked": false
+      },
+      {
+        "id": 89,
+        "name": "Bob",
+        "photo": "https://robohash.org/hassc8?size=50x50",
+        "date": "17/12/2023",
+        "content": "Visited a museum today. History comes alive!",
+        "likes": 18,
+        "bookmarks": 9,
+        "comments": [
+          {
+            "id": 12,
+            "content": "Which museum did you go to? I love history!",
+            "author": "Alice",
+            "date": "20/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 13,
+            "content": "Museums are fascinating. Tell us more!",
+            "author": "Charlie",
+            "date": "20/12/2023",
+            "isOwner": false
+          },
+          {
+            "id": 1,
+            "content": "I visited the National History Museum. It was amazing!",
+            "author": "you",
+            "date": "20/12/2023",
+            "isOwner": true
+          }
+        ],
+        "isOwner": false,
+        "isLiked": false,
+        "isBookmarked": true
       }
     ]
   }

@@ -1,5 +1,5 @@
-import ProTable from '@ant-design/pro-table';
-import { usePostContext } from '../../Context/context';
+import ProTable, {ProColumns} from '@ant-design/pro-table';
+import { usePostContext } from '../../Context/PostContextUtils';
 import { Avatar, Popconfirm, Button, Modal, Input, Tooltip, List} from 'antd';
 import {  useState } from 'react';
 type CommentType = {
@@ -10,11 +10,12 @@ type CommentType = {
   isOwner: boolean;
 };
 import { Comment } from '@ant-design/compatible';
+import { PostType } from '../../utils/Types';
 function MyPosts() {
   const { posts, setPosts } = usePostContext();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [editedContent, setEditedContent] = useState('');
-  const [editingPostId, setEditingPostId] = useState(null);
+  const [editingPostId, setEditingPostId] = useState<number | null>(null);
   
   const myPostList = posts.filter((p)=>p.isOwner)
   const handleDeleteClick = (postId : number) => {
@@ -22,7 +23,7 @@ function MyPosts() {
     setPosts(updatedPosts);
   };
 
-  const handleEditClick = (postId : any ) => {
+  const handleEditClick = (postId : number ) => {
     setIsModalVisible(true);
     setEditingPostId(postId);
   };
@@ -44,12 +45,12 @@ function MyPosts() {
     setIsModalVisible(false);
   };
 
-  const columns = [
+  const columns:ProColumns<PostType, "text">[] = [
     {
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
-      render: (_ : any, record: any) => <Avatar src={record.photo} />,
+      render: (_, record) => <Avatar src={record.photo} />,
     },
     {
       title: 'Date',
@@ -75,7 +76,7 @@ function MyPosts() {
       title: 'Action',
       dataIndex: 'action',
       key: 'action',
-      render: (_: any, record: any) => (
+      render: (_, record) => (
         <div>
           <Button onClick={() => handleEditClick(record.id)}>Edit</Button>
           <Popconfirm

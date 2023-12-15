@@ -8,7 +8,7 @@ createServer({
     
     // Define API endpoints and responses here
     this.post('/login', (_,request) => {
-      let attrs = JSON.parse(request.requestBody);
+      const attrs = JSON.parse(request.requestBody);
       
       // Mock successful login
       if (attrs.email === 'test@test.com' && attrs.password === 'password') {
@@ -29,7 +29,7 @@ createServer({
       });
     
     this.post('/signup', (_, request) => {
-      let attrs = JSON.parse(request.requestBody);
+      const attrs = JSON.parse(request.requestBody);
       
       // Mock successful signup
       if (attrs.email && attrs.password) {

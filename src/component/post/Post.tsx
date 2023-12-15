@@ -4,7 +4,7 @@ import ProCard from '@ant-design/pro-card';
 
 import { Modal, Button, Input, Avatar , List, message} from 'antd';
 import { LikeOutlined, BookOutlined, EditOutlined, DeleteOutlined, CommentOutlined } from '@ant-design/icons';
-import { usePostContext } from '../../../Context/context';
+import { usePostContext } from '../../../Context/PostContextUtils';
 import { Comment } from '@ant-design/compatible';
 // A function component for the post
 type CommentType = {
@@ -28,7 +28,13 @@ type PostType = {
     isBookmarked: boolean;
     comments: CommentType[]
 };
-const Post = ({ post }: any) => {
+
+type Props = {
+    post: PostType;
+    id:number;
+};
+
+const Post: React.FC<Props> = ({ post }) => {
     const [Liked, setIsLiked] = useState(post.isLiked);
     const [Bookmarked, setIsBookmarked] = useState(post.isBookmarked);
     const { posts, setPosts } = usePostContext();
@@ -45,7 +51,7 @@ const Post = ({ post }: any) => {
     const handleCommentsClick = () => {
         setIsCommentsVisible(!isCommentsVisible);
     };
-    const handleCommentSubmit = async (event: any) => {
+    const handleCommentSubmit = async (event:  React.FormEvent) => {
         event.preventDefault();
 
         // Get the comment content from the state
@@ -136,7 +142,7 @@ const Post = ({ post }: any) => {
     };
     const handleLikeClick = () => {
         setIsLiked(!Liked);
-        const updatedPosts = posts.map((p: any) => {
+        const updatedPosts = posts.map((p: PostType) => {
             if (p.id === post.id) {
                 return { ...p, isLiked: !Liked };
             }
@@ -148,7 +154,7 @@ const Post = ({ post }: any) => {
     const handleBookmarkClick = () => {
         setIsBookmarked(!Bookmarked);
 
-        const updatedPosts = posts.map((p: any) => {
+        const updatedPosts = posts.map((p: PostType) => {
             if (p.id === post.id) {
                 return { ...p, isBookmarked: !isBookmarked };
             }
@@ -266,7 +272,7 @@ const Post = ({ post }: any) => {
                 <p style={{ fontSize: "1.2rem" }}>{content}</p>
                 {isCommentsVisible && (
                     <div>
-                        <List dataSource={commentList} renderItem={(item: any) => <li>{item}</li>} />
+                        <List dataSource={commentList} renderItem={(item) => <li>{item}</li>} />
                         <form onSubmit={handleCommentSubmit} style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
                             <textarea name="comment" placeholder="Enter your comment here" style={{ width: "100%", height: "10vh" }} value={newComment} onChange={(e) => setNewComment(e.target.value)} />
                             <button type="submit" style={{ maxWidth: "90px", backgroundColor: '#1890ff', color: "white", fontSize: "1rem", borderRadius: "1rem" }}>Comment</button>

@@ -9,41 +9,44 @@
   display: flex;
   width: 100vw;
   gap: 2rem;
-  margin-left: 10rem ;
+  margin-left: 10rem;
   margin-right: 10rem;
   justify-content: space-between;
 }
-.left-auth-details{
-    font-size: 2rem;
-    
+
+.left-auth-details {
+  font-size: 2rem;
 }
-.left-auth-details h1{
-    background: -webkit-linear-gradient(#C62828, #F49F85);
-  -webkit-background-clip: text;
+
+.left-auth-details h1 {
+  background: linear-gradient(#c62828, #f49f85);
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@media only screen and (max-width: 760px) {
-    .left-auth-details{
-        font-size: 1rem;
-    }
-    .left-auth-details p {
-        display: none;
-    }
-    .inner-container-login{
-        display: block;
-        
-    }
+
+@media only screen and (width <= 760px) {
+  .left-auth-details {
+    font-size: 1rem;
+  }
+
+  .left-auth-details p {
+    display: none;
+  }
+
+  .inner-container-login {
+    display: block;
+  }
 }
+
 .right-auth-forms {
   display: flex;
   flex-direction: column;
 }
 
-.login-form {
-}
 .login-form-forgot {
   float: right;
 }
+
 .login-form-button {
   width: 100%;
 }

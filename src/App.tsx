@@ -30,9 +30,11 @@ function App() {
   };
  
  
-
+ 
   useEffect(() => {
-     
+     // ... your effect code ...
+   
+    
     try {
       fetch("/api/data")
         .then((response) => {
@@ -49,7 +51,8 @@ function App() {
     } catch (error) {
       console.log('Fetch error:', error.message);
     }
-  }, [posts])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   
   return (
     <UserProvider value={{ user, setUser }}>

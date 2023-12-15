@@ -1,21 +1,20 @@
-  name: Lint
+name: Lint
 
-  on: [push]
+on: [push]
 
-  jobs:
-    stylelint:
+jobs:
+  stylelint:
 
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-      steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-      - name: Install Dependencies
-        run: npm install
-      - name: Run stylelint
-        run: npm run stylelint
-  ```
-
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - name: Install Dependencies
+      run: npm install
+    - name: Run stylelint
+      run: npm run stylelint
+```

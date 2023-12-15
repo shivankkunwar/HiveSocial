@@ -1,3 +1,21 @@
 .head{
     display: flex;
 }
+
+.pro-card-container {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(#FDFDFD,#F5F5F5, #F5F5F5);
+  }
+  
+  @media (width <= 768px) {
+    .pro-card-container {
+      display: block;
+      padding:0
+    }
+  }
+
+  main .ant-pro-layout{
+    display: none;
+  }
+  

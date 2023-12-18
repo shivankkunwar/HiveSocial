@@ -7,37 +7,50 @@ This project is a small Social Media Web App functional UI  developed using Reac
 ### Authentication Login/ Sign up page
 
 - UI of Both Login and Signup form - Complete form validation.
--A dummy sign Account is available as a backend mimicking Mock data 
+![](https://github.com/shivankkunwar/HiveSocial/blob/main/src/assets/login.gif)
+
+- A dummy sign Account is available as a backend mimicking Mock data 
 - `Email: test@test.com`
 - `Password: password`
 - A Modal pops up for success and failure of the Signin and Buttons - Design Principle
+![](https://github.com/shivankkunwar/HiveSocial/blob/main/src/assets/modals.gif)
   
   
 
 ### Home page
 - Users can see posts they created and others on the timeline.
 - Users can create new posts with textual content.
+  ![](https://github.com/shivankkunwar/HiveSocial/blob/main/src/assets/addpost.gif)
 - Posts created by the user can be viewed on the 'My Posts' page.
 - Users can like and bookmark any post.
 - Users can edit or delete their own posts.
+
+![](https://github.com/shivankkunwar/HiveSocial/blob/main/src/assets/editDelete.gif)
 
 ### Likes and Bookmarks pages
 - user is able to see the posts they have liked. 
 - user is able to see the posts they have bookmarked.
 
+  ![](https://github.com/shivankkunwar/HiveSocial/blob/main/src/assets/LikesBookgif.gif)
+
 ### My posts
 - User is able to see all the posts created by the user
 - Each post is a row in a table, The row have an expandable option to show the comments for that post.
-  
+
+![](https://github.com/shivankkunwar/HiveSocial/blob/main/src/assets/Myposts.gif)
+
 ### Comments
 
 - Users can comment on any post.
 - Users can edit or delete their own comments.
 
+![](https://github.com/shivankkunwar/HiveSocial/blob/main/src/assets/comments.gif)
+
 ### User Profile
 
 - Users can view and edit their profile details on the 'My Profile' page.
 
+![](https://github.com/shivankkunwar/HiveSocial/blob/main/src/assets/profile.gif)
 ## Tech Stack
 
 - React v17+

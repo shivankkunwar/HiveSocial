@@ -24,10 +24,7 @@ function App() {
     bio: 'A short bio about you.',
     photo: 'https://robohash.org/hassc1?size=50x50'
   });
-  const handleLogout = () => {
-    
-    
-  };
+ 
  
  
  
@@ -79,7 +76,7 @@ function App() {
                   const isActiveStyle = { color: '#1890ff' };
                   return <NavLink to={path} style= { ({isActive})=>isActive? isActiveStyle : {}} >{dom}</NavLink>;
                 }}
-                rightContentRender={() => <Link to = "/"><Button onClick={handleLogout}>Logout</Button></Link>}
+                rightContentRender={() => <Link to = "/"><Button >Logout</Button></Link>}
 
               >
                 <Routes>

@@ -59,7 +59,7 @@ function SignInForm() {
                 rules={[
                     {
                       type: "email",
-                      message: "The input is not valid E-mail!",
+                      message: "The input is not valid E-mails!",
                     },
                     {
                       required: true,
@@ -68,7 +68,7 @@ function SignInForm() {
                   ]}
 
             >
-                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="enter email" />
+                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="enter email" name="email" className='emailInput'/>
             </Form.Item>
 
             <Form.Item<FieldType>
@@ -78,7 +78,7 @@ function SignInForm() {
             >
                 <Input.Password prefix={<LockOutlined className="site-form-item-icon" />}
                     type="password"
-                    placeholder="Password" />
+                    placeholder="Password" name='password'/>
             </Form.Item>
 
             <Form.Item<FieldType>
@@ -90,7 +90,7 @@ function SignInForm() {
             </Form.Item>
 
             <Form.Item >
-                <Button type="primary" htmlType="submit">
+                <Button name="login" type="primary" htmlType="submit" className='loginbutton'>
                    Login
                 </Button>
             

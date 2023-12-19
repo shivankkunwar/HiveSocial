@@ -80,7 +80,7 @@ function MyPosts() {
       title: 'Action',
       dataIndex: 'action',
       key: 'action',
-      responsive: ['xs', 'sm'],
+    
       render: (_, record) => (
         <div>
           <Button onClick={() => handleEditClick(record.id)}>Edit</Button>

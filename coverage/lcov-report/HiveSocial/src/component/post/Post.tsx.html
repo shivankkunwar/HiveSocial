@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">31.57% </span>
+                <span class="strong">32.17% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>36/114</span>
+                <span class='fraction'>37/115</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">32.14% </span>
+                <span class="strong">32.74% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>36/112</span>
+                <span class='fraction'>37/113</span>
             </div>
         
             
@@ -354,7 +354,9 @@
 <a name='L289'></a><a href='#L289'>289</a>
 <a name='L290'></a><a href='#L290'>290</a>
 <a name='L291'></a><a href='#L291'>291</a>
-<a name='L292'></a><a href='#L292'>292</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
@@ -651,6 +653,7 @@ import { Modal, Button, Input, Avatar , List, message} from 'antd';
 import { LikeOutlined, BookOutlined, EditOutlined, DeleteOutlined, CommentOutlined } from '@ant-design/icons';
 import { usePostContext } from '../../../Context/PostContextUtils';
 import { Comment } from '@ant-design/compatible';
+import "./post.css"
 // A function component for the post
 type CommentType = {
     id: number;
@@ -877,8 +880,8 @@ const Post: React.FC&lt;Props&gt; = ({ post }) =&gt; {
            
             &lt;Comment
                 actions={comment.isOwner ? [
-                    &lt;span key="edit" onClick={<span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" >handleEditComment(comment.id)}</span>&gt;Edit&lt;/span&gt;,
-                    &lt;span key="delete" onClick={<span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" >handleDeleteComment(comment.id)}</span>&gt;Delete&lt;/span&gt;
+                    &lt;span key="edit"  onClick={<span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" >handleEditComment(comment.id)}</span>&gt;Edit&lt;/span&gt;,
+                    &lt;span key="delete"  onClick={<span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" >handleDeleteComment(comment.id)}</span>&gt;Delete&lt;/span&gt;
                 ] : []}
                 author={comment.author}
                 avatar={&lt;Avatar src={`https://robohash.org/hassc${comment.id}?size=50x50`} /&gt;}
@@ -892,7 +895,7 @@ const Post: React.FC&lt;Props&gt; = ({ post }) =&gt; {
                 datetime={comment.date}
             /&gt;
             {editingCommentId === comment.id &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >confirmingEditCommentId === comment.id </span>&amp;&amp; (
-<span class="branch-2 cbranch-no" title="branch not covered" >                &lt;div style={{display:"flex", alignItems:"center",gap:"1rem"}}&gt;</span>
+<span class="branch-2 cbranch-no" title="branch not covered" >                &lt;div className='editingbuttons' &gt;</span>
                     &lt;Button type="primary" style={{  }} onClick={handleUpdateComment}&gt;update&lt;/Button&gt;
                     &lt;Button onClick={<span class="fstat-no" title="function not covered" >() =</span>&gt; {
 <span class="cstat-no" title="statement not covered" >                        setConfirmingEditCommentId(null);</span>
@@ -920,7 +923,7 @@ const Post: React.FC&lt;Props&gt; = ({ post }) =&gt; {
                         &lt;List dataSource={commentList} renderItem={<span class="fstat-no" title="function not covered" >(i</span>tem) =&gt; <span class="cstat-no" title="statement not covered" >&lt;li&gt;{item}&lt;/li&gt;}</span> /&gt;
                         &lt;form onSubmit={handleCommentSubmit} style={{ display: "flex", flexDirection: "column", gap: "2rem" }}&gt;
                             &lt;textarea name="comment" placeholder="Enter your comment here" style={{ width: "100%", height: "10vh" }} value={newComment} onChange={<span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >setNewComment(e.target.value)}</span> /&gt;
-                            &lt;button type="submit" style={{ maxWidth: "90px", backgroundColor: '#1890ff', color: "white", fontSize: "1rem", borderRadius: "1rem" }}&gt;Comment&lt;/button&gt;
+                            &lt;button type="submit" name="submitComment" style={{ maxWidth: "90px", backgroundColor: '#1890ff', color: "white", fontSize: "1rem", borderRadius: "1rem" }}&gt;Comment&lt;/button&gt;
                         &lt;/form&gt;
                     &lt;/div&gt;
                 )}
@@ -943,7 +946,7 @@ export default Post;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-12-15T20:06:13.530Z
+                at 2023-12-19T16:38:02.374Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

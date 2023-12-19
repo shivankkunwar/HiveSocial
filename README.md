@@ -73,7 +73,8 @@ This project is a small Social Media Web App functional UI  developed using Reac
 - Jest  tests have been written to ensure robustness and reliability.
 - 
 -![](https://github.com/shivankkunwar/HiveSocial/assets/66783424/3fc1b89e-ba4d-4bf8-a73a-b9e53011a8be)
--
+
+-End To End testing with Cypress
 
 ## How to run the project
 

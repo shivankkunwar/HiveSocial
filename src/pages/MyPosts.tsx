@@ -1,7 +1,10 @@
 import ProTable, {ProColumns} from '@ant-design/pro-table';
 import { usePostContext } from '../../Context/PostContextUtils';
-import { Avatar, Popconfirm, Button, Modal, Input, Tooltip, List} from 'antd';
+import { Avatar, Popconfirm, Button, Modal, Input, Tooltip, List, Grid} from 'antd';
 import {  useState } from 'react';
+
+const { useBreakpoint } = Grid;
+
 type CommentType = {
   id: number;
   content: string;
@@ -44,6 +47,7 @@ function MyPosts() {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
+  const screens = useBreakpoint();
 
   const columns:ProColumns<PostType, "text">[] = [
     {
@@ -76,6 +80,7 @@ function MyPosts() {
       title: 'Action',
       dataIndex: 'action',
       key: 'action',
+      responsive: ['xs', 'sm'],
       render: (_, record) => (
         <div>
           <Button onClick={() => handleEditClick(record.id)}>Edit</Button>
@@ -122,7 +127,7 @@ function MyPosts() {
           ),
         }}
       />
-      <Modal title="Edit Post" open={isModalVisible} onOk={handleOk} onCancel={handleCancel} okText="Yes"
+      <Modal title="Edit Post"  width={screens.xs ? '90vw' : '50vw'} open={isModalVisible} onOk={handleOk} onCancel={handleCancel} okText="Yes"
             cancelText="No">
         <Input onChange={(e) => setEditedContent(e.target.value)} placeholder='Enter your post content here (max length: 200 characters)'/>
       </Modal>

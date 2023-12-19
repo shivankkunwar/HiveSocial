@@ -6,7 +6,7 @@
 }
 
 .inner-container-login {
-  display: flex;
+  display: block;
   width: 100vw;
   gap: 2rem;
   margin-left: 10rem;
@@ -15,7 +15,7 @@
 }
 
 .left-auth-details {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .left-auth-details h1 {
@@ -24,17 +24,21 @@
   -webkit-text-fill-color: transparent;
 }
 
-@media only screen and (width <= 760px) {
+.left-auth-details p {
+  display: none;
+}
+
+@media only screen and (width >= 760px) {
   .left-auth-details {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .left-auth-details p {
-    display: none;
+    display: block;
   }
 
   .inner-container-login {
-    display: block;
+    display: flex;
   }
 }
 

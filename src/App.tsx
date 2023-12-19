@@ -76,8 +76,9 @@ function App() {
                   const isActiveStyle = { color: '#1890ff' };
                   return <NavLink to={path} style= { ({isActive})=>isActive? isActiveStyle : {}} >{dom}</NavLink>;
                 }}
+                className="basiclayout"
                 rightContentRender={() => <Link to = "/"><Button >Logout</Button></Link>}
-
+              
               >
                 <Routes>
                   <Route path="/home" element={<Home />} />

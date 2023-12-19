@@ -1,0 +1,14 @@
+.editingbuttons{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:1rem;
+
+}
+
+
+@media (width >= 768px) {
+    .editingbuttons{
+        flex-direction: row;
+    }
+}

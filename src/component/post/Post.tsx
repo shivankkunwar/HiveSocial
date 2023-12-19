@@ -4,6 +4,7 @@ import { Modal, Button, Input, Avatar , List, message} from 'antd';
 import { LikeOutlined, BookOutlined, EditOutlined, DeleteOutlined, CommentOutlined } from '@ant-design/icons';
 import { usePostContext } from '../../../Context/PostContextUtils';
 import { Comment } from '@ant-design/compatible';
+import "./post.css"
 // A function component for the post
 type CommentType = {
     id: number;
@@ -245,7 +246,7 @@ const Post: React.FC<Props> = ({ post }) => {
                 datetime={comment.date}
             />
             {editingCommentId === comment.id && confirmingEditCommentId === comment.id && (
-                <div style={{display:"flex", alignItems:"center",gap:"1rem"}}>
+                <div className='editingbuttons' >
                     <Button type="primary" style={{  }} onClick={handleUpdateComment}>update</Button>
                     <Button onClick={() => {
                         setConfirmingEditCommentId(null);

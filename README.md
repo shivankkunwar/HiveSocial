@@ -75,7 +75,8 @@ This project is a small Social Media Web App functional UI  developed using Reac
 -![](https://github.com/shivankkunwar/HiveSocial/assets/66783424/3fc1b89e-ba4d-4bf8-a73a-b9e53011a8be)
 
 -End To End testing with Cypress
-
+-
+-![](https://github.com/shivankkunwar/HiveSocial/blob/main/src/assets/endtoend.gif)
 ## How to run the project
 
 1. Clone the repository: `git clone https://github.com/shivankkunwar/HiveSocial.git`

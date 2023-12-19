@@ -230,8 +230,8 @@ const Post: React.FC<Props> = ({ post }) => {
            
             <Comment
                 actions={comment.isOwner ? [
-                    <span key="edit" onClick={() => handleEditComment(comment.id)}>Edit</span>,
-                    <span key="delete" onClick={() => handleDeleteComment(comment.id)}>Delete</span>
+                    <span key="edit"  onClick={() => handleEditComment(comment.id)}>Edit</span>,
+                    <span key="delete"  onClick={() => handleDeleteComment(comment.id)}>Delete</span>
                 ] : []}
                 author={comment.author}
                 avatar={<Avatar src={`https://robohash.org/hassc${comment.id}?size=50x50`} />}
@@ -273,7 +273,7 @@ const Post: React.FC<Props> = ({ post }) => {
                         <List dataSource={commentList} renderItem={(item) => <li>{item}</li>} />
                         <form onSubmit={handleCommentSubmit} style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
                             <textarea name="comment" placeholder="Enter your comment here" style={{ width: "100%", height: "10vh" }} value={newComment} onChange={(e) => setNewComment(e.target.value)} />
-                            <button type="submit" style={{ maxWidth: "90px", backgroundColor: '#1890ff', color: "white", fontSize: "1rem", borderRadius: "1rem" }}>Comment</button>
+                            <button type="submit" name="submitComment" style={{ maxWidth: "90px", backgroundColor: '#1890ff', color: "white", fontSize: "1rem", borderRadius: "1rem" }}>Comment</button>
                         </form>
                     </div>
                 )}

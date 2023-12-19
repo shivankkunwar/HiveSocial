@@ -6,7 +6,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "useUnknownInCatchVariables": false,
-    "types":["@types/jest", ],
+    "types":["@types/jest","node","@types/node" ],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

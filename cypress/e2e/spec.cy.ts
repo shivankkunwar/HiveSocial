@@ -3,7 +3,7 @@ describe("End to end test", () => {
     expect(true).to.equal(true);
   });
   beforeEach(() => {
-    cy.visit("https://hive-social.vercel.app/");
+    cy.visit("http://localhost:5173/");
   });
   it("renders the SignInForm", () => {
     cy.get('input[name="email"]').should("exist");

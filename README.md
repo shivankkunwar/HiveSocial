@@ -77,6 +77,8 @@ This project is a small Social Media Web App functional UI  developed using Reac
 -End To End testing with Cypress
 -
 -![](https://github.com/shivankkunwar/HiveSocial/blob/main/src/assets/endtoend.gif)
+
+-![](https://github.com/shivankkunwar/HiveSocial/blob/main/src/assets/coverageCypess.png)
 ## How to run the project
 
 1. Clone the repository: `git clone https://github.com/shivankkunwar/HiveSocial.git`

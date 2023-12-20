@@ -10,7 +10,7 @@ export default defineConfig({
     },
   },
   e2e: {
-    baseUrl: 'http://localhost:3000',
+    baseUrl: 'https://hive-social.vercel.app/',
     setupNodeEvents(on, config) {
       task(on, config);
       

@@ -1,17 +1,22 @@
-// cypress.config.js
-const { defineConfig } = require('cypress')
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
-  // setupNodeEvents can be defined in either
-  // the e2e or component configuration
-  e2e: {
-    setupNodeEvents(on, config) {
-      require('@cypress/code-coverage/task')(on, config)
-      // include any other plugin code...
+import task from '@cypress/code-coverage/task'
 
-      // It's IMPORTANT to return the config object
-      // with any changed environment variables
-      return config
+
+export default defineConfig({
+  env: {
+    codeCoverage: {
+        exclude: "cypress/**/*.*",
     },
   },
-})
+  e2e: {
+    baseUrl: 'http://localhost:3000',
+    setupNodeEvents(on, config) {
+      task(on, config);
+      
+      return config;
+  },
+  
+  
+  },
+});

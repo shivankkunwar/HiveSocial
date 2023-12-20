@@ -3,7 +3,7 @@ describe("End to end test", () => {
     expect(true).to.equal(true);
   });
   beforeEach(() => {
-    cy.visit("http://localhost:5173/");
+    cy.visit("http://localhost:3000/");
   });
   it("renders the SignInForm", () => {
     cy.get('input[name="email"]').should("exist");
@@ -55,7 +55,7 @@ describe("End to end test", () => {
     cy.get('textarea[name="content"]').type("testing post functionality");
     cy.get('button[type="submit"]').click();
     cy.contains("testing post functionality");
-    cy.get('span[aria-label="comment"]').first().click({ multiple:true });
+    cy.get('span[aria-label="comment"]').first().click({ multiple: true });
     cy.get('textarea[name="comment"]').type("This is a test comment");
     cy.get('button[name="submitComment"]').click();
     cy.contains("This is a test comment").should("exist");
@@ -67,11 +67,43 @@ describe("End to end test", () => {
 
     cy.get('textarea[name="comment"]').type("This is a test comment");
     cy.get('button[name="submitComment"]').click();
-    cy.contains('Edit').click();
-            cy.get('Input').clear().type("This is an edited post");
-            cy.contains('update').click();
-            cy.contains('Yes').click();
-            cy.contains("This is an edited post").should("exist");
+    cy.contains("Edit").click();
+    cy.get("Input").clear().type("This is an edited post");
+    cy.contains("update").click();
+    cy.contains("Yes").click();
+    cy.contains("This is an edited post").should("exist");
   });
- 
+
+  it("testing likes functionality", () => {
+    cy.get('input[name="email"]').type("test@test.com");
+    cy.get('input[name="password"]').type("password");
+    cy.get('button[type="submit"]').click();
+   
+    cy.get('span[aria-label="like"]').first().click({ multiple: true });
+    cy.contains("My Likes").click();
+    cy.contains("This is a post by Alice.").should("exist");
+   
+  });
+  
+  it("testing bookmarks functionality", () => {
+    cy.get('input[name="email"]').type("test@test.com");
+    cy.get('input[name="password"]').type("password");
+    cy.get('button[type="submit"]').click();
+   
+    cy.get('span[aria-label="book"]').first().click({ multiple: true });
+    cy.contains("My Bookmarks").click();
+    cy.contains("This is a post by Alice.").should("exist");
+   
+  });
+  it("testing my post  functionality", () => {
+    cy.get('input[name="email"]').type("test@test.com");
+    cy.get('input[name="password"]').type("password");
+    cy.get('button[type="submit"]').click();
+   
+    
+    cy.contains("My Posts").click();
+    cy.get('button[aria-label="展开行"]').first().click({ multiple: true });
+    cy.contains("Sunsets are my favorite too!").should("exist");
+   
+  });
 });

@@ -5,6 +5,20 @@ describe("End to end test", () => {
   beforeEach(() => {
     cy.visit("https://hive-social.vercel.app/");
   });
+  it("testing profile page", ()=>{
+    cy.get('input[name="email"]').type("test@test.com");
+    cy.get('input[name="password"]').type("password");
+    cy.get('button[type="submit"]').click();
+    
+    cy.contains("My Profile").click();
+    cy.contains("Edit").click();
+    cy.get('input[name="photo"]').clear().type("This is an edited photo");
+    cy.contains('Save').click();
+    cy.contains("Yes").click();
+    cy.get("img");
+  
+
+  })
   it("renders the SignInForm", () => {
     cy.get('input[name="email"]').should("exist");
     cy.get('input[name="password"]').should("exist");
@@ -106,4 +120,5 @@ describe("End to end test", () => {
     cy.contains("Sunsets are my favorite too!").should("exist");
    
   });
+  
 });

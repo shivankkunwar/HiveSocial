@@ -13,7 +13,7 @@
           {
             "id":1,
             "content": "first comment test",
-            "author":"you",
+            "author":"John Doe",
             "date":"15/12/2023",
             "isOwner":true
           },
@@ -31,7 +31,7 @@
       },
       {
         "id": 130,
-        "name": "You",
+        "name": "John Doe",
         "photo": "https://robohash.org/hassc1?size=50x50",
         "date": "13/12/2023",
         "content": "Just enjoyed a beautiful sunset. Nature is amazing!",
@@ -55,7 +55,7 @@
           {
             "id": 1,
             "content": "Glad you had a great time!",
-            "author": "you",
+            "author": "John Doe",
             "date": "16/12/2023",
             "isOwner": true
           }
@@ -76,7 +76,7 @@
           {
             "id": 1,
             "content": "Tell us more about the hidden gem!",
-            "author": "you",
+            "author": "John Doe",
             "date": "17/12/2023",
             "isOwner": true
           },
@@ -111,7 +111,7 @@
           {
             "id": 1,
             "content": "I need a good book recommendation. Please share!",
-            "author": "you",
+            "author": "John Doe",
             "date": "18/12/2023",
             "isOwner": true
           }
@@ -121,7 +121,7 @@
         "isBookmarked": false
       },{
         "id": 12,
-        "name": "You",
+        "name": "John Doe",
         "photo": "https://robohash.org/hassc7?size=50x50",
         "date": "16/12/2023",
         "content": "Just tried a new recipe! It turned out delicious!",
@@ -180,7 +180,7 @@
           {
             "id": 1,
             "content": "I visited the National History Museum. It was amazing!",
-            "author": "you",
+            "author": "John Doe",
             "date": "20/12/2023",
             "isOwner": true
           }
@@ -208,7 +208,7 @@
           {
             "id": 1,
             "content": "I'm learning French! It's a beautiful language.",
-            "author": "you",
+            "author": "John Doe",
             "date": "21/12/2023",
             "isOwner": true
           }
@@ -243,7 +243,7 @@
           {
             "id": 1,
             "content": "Thank you! It was a challenging but rewarding run.",
-            "author": "you",
+            "author": "John Doe",
             "date": "22/12/2023",
             "isOwner": true
           }
@@ -254,7 +254,7 @@
       },
       {
         "id": 13,
-        "name": "You",
+        "name": "John Doe",
         "photo": "https://robohash.org/hassc11?size=50x50",
         "date": "20/12/2023",
         "content": "Watched a classic movie marathon over the weekend. Nostalgic!",
@@ -278,7 +278,7 @@
           {
             "id": 1,
             "content": "I watched Casablanca, Gone with the Wind, and Citizen Kane.",
-            "author": "You",
+            "author": "John Doe",
             "date": "23/12/2023",
             "isOwner": true
           }
@@ -312,7 +312,7 @@
           {
             "id": 1,
             "content": "The abstract paintings were fascinating! Couldn't pick just one favorite.",
-            "author": "You",
+            "author": "John Doe",
             "date": "25/12/2023",
             "isOwner": true
           }
@@ -323,7 +323,7 @@
       },
       {
         "id": 14,
-        "name": "You",
+        "name": "John Doe",
         "photo": "https://robohash.org/hassc14?size=50x50",
         "date": "23/12/2023",
         "content": "Explored a hiking trail. Nature's beauty never ceases to amaze!",
@@ -382,7 +382,7 @@
           {
             "id": 1,
             "content": "I prepared a feast with roast turkey, mashed potatoes, and apple pie for dessert!",
-            "author": "you",
+            "author": "John Doe",
             "date": "27/12/2023",
             "isOwner": true
           }
@@ -393,7 +393,7 @@
       },
       {
         "id": 1122,
-        "name": "You",
+        "name": "John Doe",
         "photo": "https://robohash.org/hassc16?size=50x50",
         "date": "25/12/2023",
         "content": "Attended a tech conference. Exciting innovations ahead!",
@@ -417,7 +417,7 @@
           {
             "id": 1,
             "content": "I was impressed by the advancements in artificial intelligence and virtual reality.",
-            "author": "you",
+            "author": "John Doe",
             "date": "28/12/2023",
             "isOwner": true
           }
@@ -428,7 +428,7 @@
       },
       {
         "id": 131,
-        "name": "You",
+        "name": "John Doe",
         "photo": "https://robohash.org/hassc17?size=50x50",
         "date": "26/12/2023",
         "content": "Took a spontaneous road trip. Sometimes, the best adventures are unplanned!",
@@ -452,7 +452,7 @@
           {
             "id": 1,
             "content": "I explored the coastal route and stumbled upon charming seaside towns. A perfect adventure!",
-            "author": "You",
+            "author": "John Doe",
             "date": "29/12/2023",
             "isOwner": true
           }
@@ -462,7 +462,7 @@
         "isBookmarked": false
       },{
         "id": 112,
-        "name": "You",
+        "name": "John Doe",
         "photo": "https://robohash.org/hassc1?size=50x50",
         "date": "13/12/2023",
         "content": "Just enjoyed a beautiful movie. Acting is amazing!",
@@ -486,7 +486,7 @@
           {
             "id": 1,
             "content": "Glad you had a great time!",
-            "author": "you",
+            "author": "John Doe",
             "date": "16/12/2023",
             "isOwner": true
           }
@@ -507,7 +507,7 @@
           {
             "id": 1,
             "content": "Tell us more about the hidden gem!",
-            "author": "you",
+            "author": "John Doe",
             "date": "17/12/2023",
             "isOwner": true
           },
@@ -542,7 +542,7 @@
           {
             "id": 1,
             "content": "I need a good game recommendation. Please share!",
-            "author": "you",
+            "author": "John Doe",
             "date": "18/12/2023",
             "isOwner": true
           }
@@ -552,7 +552,7 @@
         "isBookmarked": false
       },{
         "id": 1211,
-        "name": "You",
+        "name": "John Doe",
         "photo": "https://robohash.org/hassc7?size=50x50",
         "date": "16/12/2023",
         "content": "Just tried a new recipe! It turned out delicious!",
@@ -611,7 +611,7 @@
           {
             "id": 1,
             "content": "I visited the National History Museum. It was amazing!",
-            "author": "you",
+            "author": "John Doe",
             "date": "20/12/2023",
             "isOwner": true
           }

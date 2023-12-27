@@ -1,6 +1,6 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import ProCard from '@ant-design/pro-card';
-import { Modal, Button, Input, Avatar , List, message} from 'antd';
+import { Modal, Button, Input, Avatar, List, message } from 'antd';
 import { LikeOutlined, BookOutlined, EditOutlined, DeleteOutlined, CommentOutlined } from '@ant-design/icons';
 import { usePostContext } from '../../../Context/PostContextUtils';
 import { Comment } from '@ant-design/compatible';
@@ -30,7 +30,7 @@ type PostType = {
 
 type Props = {
     post: PostType;
-    id:number;
+    id: number;
 };
 
 const Post: React.FC<Props> = ({ post }) => {
@@ -50,7 +50,7 @@ const Post: React.FC<Props> = ({ post }) => {
     const handleCommentsClick = () => {
         setIsCommentsVisible(!isCommentsVisible);
     };
-    const handleCommentSubmit = async (event:  React.FormEvent) => {
+    const handleCommentSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
 
         // Get the comment content from the state
@@ -192,10 +192,13 @@ const Post: React.FC<Props> = ({ post }) => {
     };
     const handleOk = () => {
         const today = new Date();
+       
+
         const dateString = today.toLocaleDateString('en-US', { year: 'numeric', month: 'numeric', day: 'numeric' });
+        const time = today.toLocaleTimeString('en-US');
         const updatedPosts = posts.map((p) => {
             if (p.id === post.id) {
-                return { ...p, date: dateString, content: editedContent };
+                return { ...p, date: dateString+" "+time, content: editedContent };
             }
             return p;
         });
@@ -228,11 +231,11 @@ const Post: React.FC<Props> = ({ post }) => {
 
     const commentList = post.comments?.map((comment: CommentType) => (
         <li key={comment.id} style={{ display: "flex", gap: "1rem" }}>
-           
+
             <Comment
                 actions={comment.isOwner ? [
-                    <span key="edit"  onClick={() => handleEditComment(comment.id)}>Edit</span>,
-                    <span key="delete"  onClick={() => handleDeleteComment(comment.id)}>Delete</span>
+                    <span key="edit" onClick={() => handleEditComment(comment.id)}>Edit</span>,
+                    <span key="delete" onClick={() => handleDeleteComment(comment.id)}>Delete</span>
                 ] : []}
                 author={comment.author}
                 avatar={<Avatar src={`https://robohash.org/hassc${comment.id}?size=50x50`} />}
@@ -247,7 +250,7 @@ const Post: React.FC<Props> = ({ post }) => {
             />
             {editingCommentId === comment.id && confirmingEditCommentId === comment.id && (
                 <div className='editingbuttons' >
-                    <Button type="primary" style={{  }} onClick={handleUpdateComment}>update</Button>
+                    <Button type="primary" style={{}} onClick={handleUpdateComment}>update</Button>
                     <Button onClick={() => {
                         setConfirmingEditCommentId(null);
                         setEditingCommentId(null); // added this line

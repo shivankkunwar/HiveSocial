@@ -1,7 +1,7 @@
 import ProTable, {ProColumns} from '@ant-design/pro-table';
 import { usePostContext } from '../../Context/PostContextUtils';
 import { Avatar, Popconfirm, Button, Modal, Input, Tooltip, List, Grid} from 'antd';
-import {  useState } from 'react';
+import {   useState } from 'react';
 
 const { useBreakpoint } = Grid;
 
@@ -20,7 +20,8 @@ function MyPosts() {
   const [editedContent, setEditedContent] = useState('');
   const [editingPostId, setEditingPostId] = useState<number | null>(null);
   
-  const myPostList = posts.filter((p)=>p.isOwner)
+ const myPostList= posts.filter((p)=>p.isOwner);
+  
   const handleDeleteClick = (postId : number) => {
     const updatedPosts = posts.filter((p) => p.id !== postId);
     setPosts(updatedPosts);

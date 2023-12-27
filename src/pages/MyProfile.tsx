@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { useUserContext } from '../../Context/UserContext.tsx';
 import styled from 'styled-components';
 import { Modal } from 'antd';
@@ -75,12 +75,24 @@ function MyProfile() {
   const { user, setUser } = useUserContext();
   const [isEditing, setIsEditing] = useState(false);
 
-  const handleEdit = () => {
-    setIsEditing(!isEditing);
-  };
+  const [name, setName] = useState<string>("john");
+
+  const [ photo , setPhoto ]= useState<string>(user.photo);
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
+    
+   setName(e.target.name);
+   setPhoto(e.target.value);
+
+    
+  };
+
+  const handleEdit = () => {
+
+    setUser({ ...user, [name]: photo });
+    setIsEditing(!isEditing);
+    
   };
   const handleConfirmEdit = () => {
     Modal.confirm({
@@ -91,8 +103,8 @@ function MyProfile() {
         console.log('Cancel');
 
       },
-      okText:"Yes",
-            cancelText:"No"
+      okText: "Yes",
+      cancelText: "No"
     });
   };
 
@@ -117,7 +129,7 @@ function MyProfile() {
         <ProfileField>
           <ProfileLabel>Photo:</ProfileLabel>
           {isEditing ? (
-            <ProfileInput name="photo" value={user.photo} onChange={handleChange} />
+            <ProfileInput name="photo" id ="image" value={photo} onChange={handleChange}  />
           ) : (
             <span>{user.photo}</span>
           )}

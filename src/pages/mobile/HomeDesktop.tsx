@@ -3,7 +3,7 @@ import { message } from "antd";
 import Post from '../../component/post/Post';
 import { usePostContext } from '../../../Context/PostContextUtils';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import { useState, } from 'react';
+import { useEffect, useState, } from 'react';
 
 
 const ITEMS_PER_PAGE = 10;
@@ -35,7 +35,7 @@ function HomeDesktop() {
   const { posts, setPosts } = usePostContext();
   const [hasMoreItems, setHasMoreItems] = useState(true);
   const [items, setItems] = useState<PostType[]>([]);
-  console.log(posts)
+  
 
 
   // Define a function to handle the submit event of the post form
@@ -56,11 +56,12 @@ function HomeDesktop() {
     // Create a new post object with some mock data
     const today = new Date();
     const dateString = today.toLocaleDateString('en-US', { year: 'numeric', month: 'numeric', day: 'numeric' });
+    const time = today.toLocaleTimeString('en-US');
     const newPost: PostType = {
       id: Math.random(),
       name: 'You',
-      photo: `https://robohash.org/hassc1?size=50x50  `,
-      date: dateString,
+      photo: `https://robohash.org/hassc1?size=50x50`,
+      date: dateString + " " +time,
       content: content,
       likes: 0,
       bookmarks: 0,
@@ -93,6 +94,10 @@ function HomeDesktop() {
       setItems(items.concat(posts.slice(items.length, items.length + ITEMS_PER_PAGE)));
     }, 500);
   };
+  useEffect(()=>{
+    fetchMoreData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
 
   // Return the ProCard component for the home page
   return (

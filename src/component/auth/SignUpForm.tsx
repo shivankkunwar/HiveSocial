@@ -1,14 +1,11 @@
-
-
-
-import { Form, Input, Button,} from "antd";
+import { Form, Input, Button, } from "antd";
 import { MailOutlined, LockOutlined } from "@ant-design/icons";
-import {  Typography } from "antd";
+import { Typography } from "antd";
 import "./Auth"
 const { Title } = Typography;
-type val={
-  email:string;
-  password:string;
+type val = {
+  email: string;
+  password: string;
 }
 
 const SignUpForm = () => {
@@ -17,11 +14,11 @@ const SignUpForm = () => {
   };
 
   return (
-    <div style={{display:"flex", flexDirection:"column"}}>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <Title>Sign Up</Title>
 
-      <Form name="basic" initialValues={{ email: "" }} onFinish={onFinish} 
-        style={{ width: 300,}} >
+      <Form name="basic" initialValues={{ email: "" }} onFinish={onFinish}
+        style={{ width: 300, }} >
         <Form.Item
           name="email"
           rules={[

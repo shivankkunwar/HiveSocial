@@ -10,6 +10,11 @@ function Login() {
 
   return (
     <div className='outer-container-login'>
+      <div className="modal-auth">
+        Use this credentials
+        <p>email: test@test.com</p>
+        <p>pass:  password</p>
+      </div>
       <div className="inner-container-login">
         <div className="left-auth-details">
         <h1>Hive Social</h1>

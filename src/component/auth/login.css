@@ -14,6 +14,17 @@
   justify-content: space-between;
 }
 
+.modal-auth{
+  position: absolute;
+  top:10px;
+  right: 10px;
+  display: flex;
+  padding: 10px;
+  background: linear-gradient(#f1c9c9, #f1cec3);
+  border: 1px solid #c62828;
+  flex-direction: column;
+}
+
 .left-auth-details {
   font-size: 1rem;
 }
